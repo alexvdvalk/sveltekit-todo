@@ -38,8 +38,6 @@ export const actions = {
     const title = (data.get("title") as string) || "No title";
     const complete = !!data.get("complete");
     const id = "" + Math.random();
-    // Emulate a 'loading' state
-    await new Promise((r) => setTimeout(r, 2000));
 
     todos.push({
       id,
