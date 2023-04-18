@@ -36,7 +36,7 @@ export const actions = {
   addTodo: async (event) => {
     const data = await event.request.formData();
     const title = (data.get("title") as string) || "No title";
-    const complete = !!data.get("complete");
+    const complete = false;
     const id = "" + Math.random();
 
     todos.push({
